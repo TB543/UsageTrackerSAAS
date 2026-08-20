@@ -1,0 +1,135 @@
+.navbar {
+  width: 100vw;
+  height: 115px;
+  
+  display: flex;
+  align-items: center;
+
+  padding: 0 12px;
+  box-sizing: border-box;
+
+  background-color: #07111c;
+  color: #ffffff;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  border-bottom: 1px solid #24506f;
+}
+
+/* Logo */
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.navbar-logo {
+  height: 115px;
+  width: auto;
+}
+
+/* Navigation */
+
+.navbar-nav {
+  flex: 1;
+  padding: 10%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.navbar-nav a {
+  color: #ffffff;
+  text-decoration: none;
+
+  font-size: 20px;
+  font-weight: 500;
+
+  transition:
+    color 0.2s ease,
+    text-shadow 0.2s ease;
+}
+
+.navbar-nav a:hover {
+  color: #38bdf8;
+
+  text-shadow:
+    0 0 12px rgba(56, 189, 248, 0.4);
+}
+
+/* Buttons */
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+
+  margin-right: 12px;
+
+  gap: 15px;
+
+  flex-shrink: 0;
+}
+
+.navbar-actions a {
+  padding: 10px 20px;
+  text-decoration: none;
+
+  border-radius: 10px;
+
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Login */
+
+.login-button {
+  border: 1px solid #24506f;
+
+  background-color: #0d1e2e;
+  color: #ffffff;
+}
+
+.login-button:hover {
+  background-color: #112b3f;
+  border-color: #38bdf8;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 4px 14px rgba(56, 189, 248, 0.15);
+}
+
+/* Create Account */
+
+.signup-button {
+  border: 1px solid #38bdf8;
+
+  background-color: #38bdf8;
+  color: #06101a;
+
+  font-weight: 600;
+}
+
+.signup-button:hover {
+  background-color: #4ed5ff;
+  border-color: #4ed5ff;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 4px 18px rgba(56, 189, 248, 0.3);
+}

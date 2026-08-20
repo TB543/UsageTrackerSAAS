@@ -1,0 +1,620 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xhtml="http://www.w3.org/1999/xhtml"
+     viewBox="32 32 544 192"
+     width="544"
+     height="192"
+     preserveAspectRatio="xMinYMin meet">
+
+  <defs>
+
+    <radialGradient id="coinFace" cx="30%" cy="24%" r="80%">
+      <stop offset="0%" stop-color="#1B354B"/>
+      <stop offset="55%" stop-color="#0D1E2E"/>
+      <stop offset="100%" stop-color="#07111C"/>
+    </radialGradient>
+
+    <linearGradient id="coinEdge"
+                    x1="0%" y1="0%"
+                    x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06101A"/>
+      <stop offset="30%" stop-color="#173B55"/>
+      <stop offset="50%" stop-color="#2B6687"/>
+      <stop offset="70%" stop-color="#173B55"/>
+      <stop offset="100%" stop-color="#06101A"/>
+    </linearGradient>
+
+    <linearGradient id="traceGradient"
+                    x1="0%" y1="0%"
+                    x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#9AEAFF"/>
+      <stop offset="35%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#087AA7"/>
+    </linearGradient>
+
+    <linearGradient id="tokenFace"
+                    x1="20%" y1="10%"
+                    x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#203B52"/>
+      <stop offset="50%" stop-color="#112335"/>
+      <stop offset="100%" stop-color="#091522"/>
+    </linearGradient>
+
+    <linearGradient id="tokenEdge"
+                    x1="0%" y1="0%"
+                    x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4ED5FF"/>
+      <stop offset="50%" stop-color="#1B6B91"/>
+      <stop offset="100%" stop-color="#082538"/>
+    </linearGradient>
+
+    <filter id="traceGlow"
+            x="-30%" y="-30%"
+            width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.1" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="raisedShadow"
+            x="-30%" y="-30%"
+            width="160%" height="160%">
+      <feDropShadow
+        dx="0"
+        dy="1.5"
+        stdDeviation="1.2"
+        flood-color="#000000"
+        flood-opacity="0.9"/>
+    </filter>
+
+    <filter id="textGlow"
+            x="-20%"
+            y="-50%"
+            width="140%"
+            height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+  </defs>
+
+  <foreignObject
+    x="32"
+    y="32"
+    width="544"
+    height="192">
+
+    <xhtml:div
+      style="
+        width:544px;
+        height:192px;
+        margin:0;
+        padding:0;
+        display:flex;
+        align-items:center;
+        overflow:visible;
+      "
+    >
+
+      <!-- COIN -->
+
+      <xhtml:div
+        style="
+          position:relative;
+          width:192px;
+          height:192px;
+          flex:0 0 192px;
+          margin:0;
+          padding:0;
+          perspective:700px;
+        "
+      >
+
+        <xhtml:div
+          style="
+            position:relative;
+            width:192px;
+            height:192px;
+            margin:0;
+            padding:0;
+            transform-style:preserve-3d;
+            animation:coinFlip 6s infinite;
+          "
+        >
+
+          <xhtml:style>
+
+            @keyframes coinFlip {
+
+              0% {
+                transform:rotateY(0deg);
+              }
+
+              50% {
+                transform:rotateY(0deg);
+              }
+
+              70% {
+                transform:rotateY(360deg);
+              }
+
+              100% {
+                transform:rotateY(360deg);
+              }
+
+            }
+
+            .face {
+              position:absolute;
+              left:0;
+              top:0;
+              width:192px;
+              height:192px;
+              transform-style:preserve-3d;
+              backface-visibility:hidden;
+              -webkit-backface-visibility:hidden;
+            }
+
+            .front {
+              transform:translateZ(4px);
+              z-index:20;
+            }
+
+            .back {
+              transform:
+                rotateY(180deg)
+                translateZ(4px);
+              z-index:10;
+            }
+
+            .coinBody {
+              position:absolute;
+              left:0;
+              top:0;
+              width:192px;
+              height:192px;
+              z-index:1;
+            }
+
+            .pcb {
+              position:absolute;
+              left:0;
+              top:0;
+              width:192px;
+              height:192px;
+              transform:translateZ(2px);
+              z-index:30;
+            }
+
+            .token {
+              position:absolute;
+              left:0;
+              top:0;
+              width:192px;
+              height:192px;
+              transform:translateZ(4px);
+              z-index:40;
+              filter:url(#raisedShadow);
+            }
+
+            .logo {
+              position:absolute;
+              left:0;
+              top:0;
+              width:192px;
+              height:192px;
+              transform:translateZ(5.5px);
+              z-index:50;
+              filter:url(#raisedShadow);
+            }
+
+          </xhtml:style>
+
+
+          <!-- COIN BODY -->
+
+          <xhtml:div class="coinBody">
+
+            <svg viewBox="0 0 256 256"
+                 width="192"
+                 height="192">
+
+              <circle
+                cx="128"
+                cy="128"
+                r="96"
+                fill="#06101A"
+                stroke="#06101A"
+                stroke-width="11"/>
+
+              <circle
+                cx="128"
+                cy="128"
+                r="96"
+                fill="none"
+                stroke="url(#coinEdge)"
+                stroke-width="9"/>
+
+              <circle
+                cx="128"
+                cy="128"
+                r="96"
+                fill="none"
+                stroke="#24506F"
+                stroke-width="2"
+                opacity="0.8"/>
+
+            </svg>
+
+          </xhtml:div>
+
+
+          <!-- FRONT -->
+
+          <xhtml:div class="face front">
+
+            <svg viewBox="0 0 256 256"
+                 width="192"
+                 height="192">
+
+              <circle
+                cx="128"
+                cy="128"
+                r="96"
+                fill="url(#coinFace)"
+                stroke="#38BDF8"
+                stroke-width="7"/>
+
+              <circle
+                cx="128"
+                cy="128"
+                r="89"
+                fill="none"
+                stroke="#173B55"
+                stroke-width="5"/>
+
+              <circle
+                cx="128"
+                cy="128"
+                r="83"
+                fill="none"
+                stroke="#24506F"
+                stroke-width="4"/>
+
+              <circle
+                cx="128"
+                cy="128"
+                r="79"
+                fill="none"
+                stroke="#071827"
+                stroke-width="2"/>
+
+            </svg>
+
+
+            <!-- PCB -->
+
+            <xhtml:div class="pcb">
+
+              <svg viewBox="0 0 256 256"
+                   width="192"
+                   height="192">
+
+                <g
+                  fill="none"
+                  stroke="#02090F"
+                  stroke-width="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+
+                  <path d="M112 97V78L97 63V55"/>
+                  <path d="M144 97V78L159 63V55"/>
+
+                  <path d="M112 159V178L97 193V201"/>
+                  <path d="M144 159V178L159 193V201"/>
+
+                  <path d="M97 112H78L63 97H55"/>
+                  <path d="M97 144H78L63 159H55"/>
+
+                  <path d="M159 112H178L193 97H201"/>
+                  <path d="M159 144H178L193 159H201"/>
+
+                  <path d="M103 103L87 87H68"/>
+                  <path d="M153 103L169 87H188"/>
+
+                  <path d="M103 153L87 169H68"/>
+                  <path d="M153 153L169 169H188"/>
+
+                </g>
+
+                <g
+                  fill="none"
+                  stroke="url(#traceGradient)"
+                  stroke-width="7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  filter="url(#traceGlow)">
+
+                  <path d="M112 97V78L97 63V55"/>
+                  <path d="M144 97V78L159 63V55"/>
+
+                  <path d="M112 159V178L97 193V201"/>
+                  <path d="M144 159V178L159 193V201"/>
+
+                  <path d="M97 112H78L63 97H55"/>
+                  <path d="M97 144H78L63 159H55"/>
+
+                  <path d="M159 112H178L193 97H201"/>
+                  <path d="M159 144H178L193 159H201"/>
+
+                  <path d="M103 103L87 87H68"/>
+                  <path d="M153 103L169 87H188"/>
+
+                  <path d="M103 153L87 169H68"/>
+                  <path d="M153 153L169 153H188"/>
+
+                </g>
+
+                <g
+                  fill="none"
+                  stroke="#24506F"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+
+                  <path d="M98 82L82 66V58"/>
+                  <path d="M158 82L174 66V58"/>
+
+                  <path d="M82 98L67 83H59"/>
+                  <path d="M174 98L189 83H197"/>
+
+                  <path d="M82 158L67 173H59"/>
+                  <path d="M174 158L189 173H197"/>
+
+                  <path d="M98 174L82 190V198"/>
+                  <path d="M158 174L174 190V198"/>
+
+                  <path d="M72 119H60L51 110"/>
+                  <path d="M184 119H196L205 110"/>
+
+                  <path d="M72 137H60L51 146"/>
+                  <path d="M184 137H196L205 146"/>
+
+                </g>
+
+                <g
+                  fill="#38BDF8"
+                  stroke="#06101A"
+                  stroke-width="2">
+
+                  <circle cx="97" cy="55" r="6"/>
+                  <circle cx="159" cy="55" r="6"/>
+
+                  <circle cx="97" cy="201" r="6"/>
+                  <circle cx="159" cy="201" r="6"/>
+
+                  <circle cx="55" cy="97" r="6"/>
+                  <circle cx="55" cy="159" r="6"/>
+
+                  <circle cx="201" cy="97" r="6"/>
+                  <circle cx="201" cy="159" r="6"/>
+
+                  <circle cx="68" cy="87" r="5"/>
+                  <circle cx="188" cy="87" r="5"/>
+
+                  <circle cx="68" cy="169" r="5"/>
+                  <circle cx="188" cy="169" r="5"/>
+
+                </g>
+
+              </svg>
+
+            </xhtml:div>
+
+
+            <!-- TOKEN -->
+
+            <xhtml:div class="token">
+
+              <svg viewBox="0 0 256 256"
+                   width="192"
+                   height="192">
+
+                <path
+                  d="
+                    M128 77
+                    L165 99
+                    V159
+                    L128 181
+                    L91 159
+                    V99
+                    Z"
+                  fill="#02070C"/>
+
+                <path
+                  d="
+                    M128 75
+                    L164 97
+                    V157
+                    L128 179
+                    L92 157
+                    V97
+                    Z"
+                  fill="url(#tokenEdge)"
+                  stroke="#24506F"
+                  stroke-width="8"
+                  stroke-linejoin="round"/>
+
+                <path
+                  d="
+                    M128 75
+                    L162 96
+                    V155
+                    L128 176
+                    L94 155
+                    V96
+                    Z"
+                  fill="url(#tokenFace)"
+                  stroke="#4ED5FF"
+                  stroke-width="6"
+                  stroke-linejoin="round"/>
+
+                <path
+                  d="
+                    M128 88
+                    L151 102
+                    V150
+                    L128 164
+                    L105 150
+                    V102
+                    Z"
+                  fill="none"
+                  stroke="#24506F"
+                  stroke-width="4"
+                  stroke-linejoin="round"/>
+
+              </svg>
+
+            </xhtml:div>
+
+
+            <!-- T -->
+
+            <xhtml:div class="logo">
+
+              <svg viewBox="0 0 256 256"
+                   width="192"
+                   height="192">
+
+                <g
+                  fill="none"
+                  stroke="#02070B"
+                  stroke-width="17"
+                  stroke-linecap="round">
+
+                  <path d="M106 109H150"/>
+                  <path d="M128 109V152"/>
+
+                </g>
+
+                <g
+                  fill="none"
+                  stroke="#8DE6FF"
+                  stroke-width="15"
+                  stroke-linecap="round">
+
+                  <path d="M106 106H150"/>
+                  <path d="M128 106V149"/>
+
+                </g>
+
+                <g
+                  fill="none"
+                  stroke="#FFFFFF"
+                  stroke-width="11"
+                  stroke-linecap="round">
+
+                  <path d="M106 106H150"/>
+                  <path d="M128 106V149"/>
+
+                </g>
+
+              </svg>
+
+            </xhtml:div>
+
+          </xhtml:div>
+
+
+          <!-- BACK -->
+
+          <xhtml:div class="face back">
+
+            <svg viewBox="0 0 256 256"
+                 width="192"
+                 height="192">
+
+              <circle
+                cx="128"
+                cy="128"
+                r="96"
+                fill="#07121D"
+                stroke="#173B55"
+                stroke-width="7"/>
+
+              <circle
+                cx="128"
+                cy="128"
+                r="89"
+                fill="none"
+                stroke="#24506F"
+                stroke-width="5"/>
+
+              <circle
+                cx="128"
+                cy="128"
+                r="82"
+                fill="none"
+                stroke="#102C42"
+                stroke-width="3"/>
+
+            </svg>
+
+          </xhtml:div>
+
+        </xhtml:div>
+
+      </xhtml:div>
+
+
+      <!-- WORDMARK -->
+
+      <xhtml:div
+        style="
+          display:flex;
+          align-items:center;
+          height:192px;
+          margin:0 0 0 -14px;
+          padding:0;
+          font-family:
+            Inter,
+            -apple-system,
+            BlinkMacSystemFont,
+            'Segoe UI',
+            sans-serif;
+          font-size:74px;
+          font-weight:650;
+          letter-spacing:-3.5px;
+          white-space:nowrap;
+          line-height:1;
+        "
+      >
+
+        <xhtml:span
+          style="
+            color:#FFFFFF;
+            margin:0;
+            padding:0;
+          "
+        >oken</xhtml:span>
+
+        <xhtml:span
+          style="
+            color:#38BDF8;
+            margin:0 0 0 5px;
+            padding:0;
+            filter:url(#textGlow);
+          "
+        >Meter</xhtml:span>
+
+      </xhtml:div>
+
+    </xhtml:div>
+
+  </foreignObject>
+
+</svg>

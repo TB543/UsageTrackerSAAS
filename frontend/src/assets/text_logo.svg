@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 10 370 52"
+     role="img"
+     aria-label="TokenMeter">
+
+  <defs>
+    <filter id="textGlow"
+            x="-10%"
+            y="-30%"
+            width="120%"
+            height="160%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Token -->
+  <text
+    x="182"
+    y="60"
+    text-anchor="end"
+    font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-size="68"
+    font-weight="650"
+    letter-spacing="-3"
+    fill="#FFFFFF">Token</text>
+
+  <!-- Meter halo -->
+  <text
+    x="182"
+    y="60"
+    text-anchor="start"
+    font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-size="68"
+    font-weight="650"
+    letter-spacing="-3"
+    fill="#38BDF8"
+    opacity="0.9"
+    filter="url(#textGlow)">Meter</text>
+
+  <!-- Meter -->
+  <text
+    x="182"
+    y="60"
+    text-anchor="start"
+    font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-size="68"
+    font-weight="650"
+    letter-spacing="-3"
+    fill="#38BDF8">Meter</text>
+
+</svg>
