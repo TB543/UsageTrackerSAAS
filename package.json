@@ -1,0 +1,19 @@
+{
+    "name": "UsageTrackerSAAS",
+    "version": "0.0.0",
+    "description": "Usage based SAAS billing platform",
+    "private": true,
+    "type": "module",
+    "engines": {
+        "node": "24.14.1"
+    },
+    "scripts": {
+        "dev": "tsx watch src/main.ts",
+        "build": "tsc",
+        "start": "node dist/main.js"
+    },
+    "devDependencies": {
+        "tsx": "^4.23.12",
+        "typescript": "^7.0.2"
+    }
+}
