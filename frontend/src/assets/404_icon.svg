@@ -1,0 +1,346 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 520" width="640" height="520" role="img" aria-labelledby="title desc">
+  <title id="title">404 broken robot</title>
+  <desc id="desc">A futuristic blue and cyan broken 404 robot.</desc>
+
+  <defs>
+    <!-- Background / body palette -->
+    <linearGradient id="robotBody"
+                    x1="20%" y1="10%"
+                    x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#203B52"/>
+      <stop offset="50%" stop-color="#112335"/>
+      <stop offset="100%" stop-color="#091522"/>
+    </linearGradient>
+
+    <linearGradient id="robotEdge"
+                    x1="0%" y1="0%"
+                    x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4ED5FF"/>
+      <stop offset="50%" stop-color="#1B6B91"/>
+      <stop offset="100%" stop-color="#082538"/>
+    </linearGradient>
+
+    <radialGradient id="screenFace" cx="30%" cy="24%" r="80%">
+      <stop offset="0%" stop-color="#1B354B"/>
+      <stop offset="55%" stop-color="#0D1E2E"/>
+      <stop offset="100%" stop-color="#07111C"/>
+    </radialGradient>
+
+    <linearGradient id="cyanGlow"
+                    x1="0%" y1="0%"
+                    x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#9AEAFF"/>
+      <stop offset="35%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#087AA7"/>
+    </linearGradient>
+
+    <filter id="glow"
+            x="-30%" y="-30%"
+            width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="shadow"
+            x="-30%" y="-30%"
+            width="160%" height="160%">
+      <feDropShadow
+        dx="0"
+        dy="8"
+        stdDeviation="8"
+        flood-color="#000000"
+        flood-opacity="0.65"/>
+    </filter>
+  </defs>
+
+  <!-- Ground -->
+  <path
+    d="M92 445 C180 425 282 438 360 447 C438 456 523 452 570 437"
+    fill="none"
+    stroke="#173B55"
+    stroke-width="8"
+    stroke-linecap="round"/>
+
+  <!-- 404 SIGN -->
+  <g filter="url(#shadow)">
+    <path
+      d="M430 115 L545 115 L545 330 L500 330 L500 382 L430 382 Z"
+      fill="url(#robotBody)"
+      stroke="#24506F"
+      stroke-width="7"/>
+
+    <!-- glowing cyan top edge -->
+    <path
+      d="M430 115 L545 115"
+      stroke="#38BDF8"
+      stroke-width="12"
+      stroke-linecap="round"
+      filter="url(#glow)"/>
+
+    <!-- 404 -->
+    <text
+      x="487"
+      y="245"
+      text-anchor="middle"
+      font-family="Arial, Helvetica, sans-serif"
+      font-size="78"
+      font-weight="700"
+      fill="#8DE6FF">
+      404
+    </text>
+
+    <!-- broken circuitry -->
+    <path
+      d="M456 284 L475 302 L493 283 L511 302 L529 284"
+      fill="none"
+      stroke="#38BDF8"
+      stroke-width="7"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      filter="url(#glow)"/>
+  </g>
+
+  <!-- Antenna -->
+  <path
+    d="M235 94 L235 62"
+    stroke="#24506F"
+    stroke-width="8"
+    stroke-linecap="round"/>
+
+  <circle
+    cx="235"
+    cy="49"
+    r="13"
+    fill="#38BDF8"
+    stroke="#06101A"
+    stroke-width="5"
+    filter="url(#glow)"/>
+
+  <!-- ROBOT HEAD -->
+  <g filter="url(#shadow)">
+
+    <rect
+      x="125"
+      y="92"
+      width="220"
+      height="164"
+      rx="30"
+      fill="url(#robotBody)"
+      stroke="url(#robotEdge)"
+      stroke-width="8"/>
+
+    <!-- Face screen -->
+    <rect
+      x="150"
+      y="120"
+      width="170"
+      height="103"
+      rx="20"
+      fill="url(#screenFace)"
+      stroke="#24506F"
+      stroke-width="5"/>
+
+    <!-- subtle screen border -->
+    <rect
+      x="157"
+      y="127"
+      width="156"
+      height="89"
+      rx="15"
+      fill="none"
+      stroke="#173B55"
+      stroke-width="3"/>
+
+    <!-- Tired eyes -->
+    <path
+      d="M174 160 Q191 147 207 160"
+      fill="none"
+      stroke="#8DE6FF"
+      stroke-width="9"
+      stroke-linecap="round"
+      filter="url(#glow)"/>
+
+    <path
+      d="M263 160 Q279 147 296 160"
+      fill="none"
+      stroke="#8DE6FF"
+      stroke-width="9"
+      stroke-linecap="round"
+      filter="url(#glow)"/>
+
+    <!-- Sad mouth -->
+    <path
+      d="M205 194 Q235 177 265 194"
+      fill="none"
+      stroke="#38BDF8"
+      stroke-width="8"
+      stroke-linecap="round"/>
+
+    <!-- Ear bolts -->
+    <circle
+      cx="115"
+      cy="170"
+      r="13"
+      fill="#1B6B91"
+      stroke="#38BDF8"
+      stroke-width="5"/>
+
+    <circle
+      cx="355"
+      cy="170"
+      r="13"
+      fill="#1B6B91"
+      stroke="#38BDF8"
+      stroke-width="5"/>
+  </g>
+
+  <!-- ROBOT BODY -->
+  <g filter="url(#shadow)">
+
+    <rect
+      x="155"
+      y="270"
+      width="160"
+      height="128"
+      rx="26"
+      fill="url(#robotBody)"
+      stroke="url(#robotEdge)"
+      stroke-width="8"/>
+
+    <!-- chest panel -->
+    <rect
+      x="190"
+      y="296"
+      width="90"
+      height="52"
+      rx="12"
+      fill="#071827"
+      stroke="#24506F"
+      stroke-width="5"/>
+
+    <!-- chest indicators -->
+    <circle
+      cx="216"
+      cy="322"
+      r="7"
+      fill="#38BDF8"
+      filter="url(#glow)"/>
+
+    <circle
+      cx="254"
+      cy="322"
+      r="7"
+      fill="#4ED5FF"
+      filter="url(#glow)"/>
+  </g>
+
+  <!-- LEFT ARM -->
+  <path
+    d="M157 294 L106 332 L91 380"
+    fill="none"
+    stroke="#173B55"
+    stroke-width="24"
+    stroke-linecap="round"
+    stroke-linejoin="round"/>
+
+  <path
+    d="M157 294 L106 332 L91 380"
+    fill="none"
+    stroke="#38BDF8"
+    stroke-width="7"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    filter="url(#glow)"/>
+
+  <circle
+    cx="88"
+    cy="389"
+    r="18"
+    fill="url(#robotBody)"
+    stroke="#38BDF8"
+    stroke-width="7"/>
+
+  <!-- RIGHT ARM -->
+  <path
+    d="M313 298 L362 338 L389 387"
+    fill="none"
+    stroke="#173B55"
+    stroke-width="24"
+    stroke-linecap="round"
+    stroke-linejoin="round"/>
+
+  <path
+    d="M313 298 L362 338 L389 387"
+    fill="none"
+    stroke="#38BDF8"
+    stroke-width="7"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    filter="url(#glow)"/>
+
+  <circle
+    cx="397"
+    cy="399"
+    r="18"
+    fill="url(#robotBody)"
+    stroke="#38BDF8"
+    stroke-width="7"/>
+
+  <!-- LEGS -->
+  <path
+    d="M198 397 L190 438"
+    stroke="#173B55"
+    stroke-width="25"
+    stroke-linecap="round"/>
+
+  <path
+    d="M270 397 L286 438"
+    stroke="#173B55"
+    stroke-width="25"
+    stroke-linecap="round"/>
+
+  <path
+    d="M198 397 L190 438"
+    stroke="#38BDF8"
+    stroke-width="7"
+    stroke-linecap="round"
+    filter="url(#glow)"/>
+
+  <path
+    d="M270 397 L286 438"
+    stroke="#38BDF8"
+    stroke-width="7"
+    stroke-linecap="round"
+    filter="url(#glow)"/>
+
+  <!-- feet -->
+  <path
+    d="M164 447 Q190 432 215 447"
+    fill="none"
+    stroke="#24506F"
+    stroke-width="14"
+    stroke-linecap="round"/>
+
+  <path
+    d="M265 447 Q292 432 319 447"
+    fill="none"
+    stroke="#24506F"
+    stroke-width="14"
+    stroke-linecap="round"/>
+
+  <!-- Fallen bolts -->
+  <circle
+    cx="374"
+    cy="442"
+    r="7"
+    fill="#38BDF8"/>
+
+  <circle
+    cx="407"
+    cy="451"
+    r="5"
+    fill="#4ED5FF"/>
+</svg>

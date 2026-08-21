@@ -1,0 +1,127 @@
+.not-found-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #07111c;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.not-found-container {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logo */
+.not-found-logo {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 25px;
+
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.not-found-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* 404 Card */
+.not-found-card {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 45px 40px;
+  border: 1px solid #24506f;
+  border-radius: 5px;
+  background-color: #0d1e2e;
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+
+/* 404 Number */
+.not-found-code {
+  margin-bottom: 10px;
+  color: #38bdf8;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 2px;
+}
+
+/* Heading */
+.not-found-card h1 {
+  margin: 0 0 15px 0;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Description */
+.not-found-card p {
+  margin: 0;
+  color: #9aabba;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Back to Home */
+.back-home-link {
+  align-self: flex-start;
+  margin-top: 20px;
+  margin-left: 40px;
+  color: #7d91a3;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.back-home-link:hover {
+  color: #38bdf8;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .not-found-page {
+    padding: 30px 20px;
+  }
+
+  .not-found-logo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+    transform: translateY(-35px);
+  }
+
+  .not-found-card {
+    padding: 35px 25px;
+  }
+
+  .not-found-code {
+    font-size: 60px;
+  }
+
+  .not-found-card h1 {
+    font-size: 24px;
+  }
+
+  .not-found-card p {
+    font-size: 15px;
+  }
+
+  .back-home-link {
+    margin-left: 25px;
+  }
+}

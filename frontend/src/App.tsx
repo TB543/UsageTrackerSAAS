@@ -1,23 +1,27 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Home from "./pages/Home/Home";
-import Dashboard from "./pages/Dashboard/Dashboard";
-import Docs from "./pages/Docs/Docs";
-import Features from "./pages/Features/Features";
 import Login from "./pages/Login/Login";
-import Pricing from "./pages/Pricing/Pricing";
 import Signup from "./pages/Signup/Signup";
+import UnderDevelopment from "./pages/UnderDevelopment/UnderDevelopment";
+import NotFound from "./pages/NotFound/NotFound";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/docs" element={<Docs />} />
-        <Route path="/features" element={<Features />} />
+
+        <Route path="/dashboard" element={<UnderDevelopment />} />
+        <Route path="/docs" element={<UnderDevelopment />} />
+        <Route path="/features" element={<UnderDevelopment />} />
+
         <Route path="/login" element={<Login />} />
-        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/pricing" element={<UnderDevelopment />} />
         <Route path="/signup" element={<Signup />} />
+
+        {/* Catch-all route for pages that don't exist */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
